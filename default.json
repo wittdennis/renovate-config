@@ -9,7 +9,7 @@
   "separateMajorMinor": true,
   "separateMinorPatch": true,
   "separateMultipleMajor": true,
-  "addLabels": ["manager::{{{manager}}}", "updateType::{{{updateType}}}"],
+  "addLabels": ["manager:{{{manager}}}", "updateType:{{{updateType}}}"],
   "lockFileMaintenance": {
     "enabled": true
   },
