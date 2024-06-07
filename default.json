@@ -3,17 +3,17 @@
   "extends": [
     ":dependencyDashboard",
     ":label(renovate)",
-    ":semanticCommitTypeAll(chore)"
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    ":disableRateLimiting",
+    ":reviewer(wittdennis)",
+    ":separateMajorReleases",
+    ":separatePatchReleases"
   ],
-  "reviewers": ["wittdennis"],
-  "separateMajorMinor": true,
-  "separateMinorPatch": true,
-  "separateMultipleMajor": true,
   "addLabels": ["manager:{{{manager}}}", "updateType:{{{updateType}}}"],
   "lockFileMaintenance": {
     "enabled": true
   },
-  "semanticCommits": "enabled",
   "customManagers": [
     {
       "customType": "regex",
