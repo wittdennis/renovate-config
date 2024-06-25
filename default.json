@@ -8,7 +8,8 @@
     ":disableRateLimiting",
     ":reviewer(wittdennis)",
     ":separateMajorReleases",
-    ":separatePatchReleases"
+    ":separatePatchReleases",
+    ":enablePreCommit"
   ],
   "addLabels": ["manager:{{{manager}}}", "updateType:{{{updateType}}}"],
   "lockFileMaintenance": {
