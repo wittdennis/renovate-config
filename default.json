@@ -58,5 +58,12 @@
   },
   "argocd": {
     "fileMatch": ["\\.cd.yaml$"]
-  }
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["pre-commit"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ]
 }
