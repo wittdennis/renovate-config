@@ -64,6 +64,10 @@
       "matchManagers": ["pre-commit"],
       "matchUpdateTypes": ["patch"],
       "automerge": true
+    },
+    {
+      "matchDepNames": ["wittdennis/pipelines"],
+      "automerge": true
     }
   ]
 }
