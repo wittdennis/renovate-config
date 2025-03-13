@@ -68,6 +68,10 @@
     {
       "matchDepNames": ["wittdennis/pipelines"],
       "automerge": true
+    },
+    {
+      "matchManagers": ["gomod"],
+      "semanticCommitType": "fix"
     }
   ]
 }
