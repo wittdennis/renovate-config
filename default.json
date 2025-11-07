@@ -31,6 +31,18 @@
     },
     {
       "customType": "regex",
+      "description": "Update OCI helm chart dependencies",
+      "fileMatch": "\\.cd.yaml$",
+      "matchStrings": [
+        // # renovate: datasource=docker
+        // name: postgresql
+        // url: oci://registry-1.docker.io/bitnamicharts
+        // version: 13.2.24
+        "#\\s+renovate:\\s+datasource=(?<datasource>docker)\\s+name:\\s+['\"]?(?<product>[^'\"\\s]+)['\"]?\\s+url:\\s+['\"]?oci://(?<namespace>[^'\"\\s]+)['\"]?\\s+version:\\s+['\"]?(?<currentValue>[^'\"\\s]+)['\"]?"
+      ]
+    },
+    {
+      "customType": "regex",
       "description": "Update docker images in yaml manifests",
       "fileMatch": ["^.*\\.ya?ml$"],
       "matchStrings": [
