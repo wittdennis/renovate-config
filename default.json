@@ -13,7 +13,8 @@
     "group:recommended",
     "group:monorepos",
     "workarounds:all",
-    ":enableVulnerabilityAlerts"
+    ":enableVulnerabilityAlerts",
+    "helpers:pinGitHubActionDigests"
   ],
   "addLabels": ["update:{{{updateType}}}"],
   "lockFileMaintenance": {
