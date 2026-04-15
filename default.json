@@ -36,11 +36,11 @@
     },
     {
       "customType": "regex",
-      "description": "Update docker images in yaml manifests",
+      "description": "Update docker images in yaml manifests (with digest support)",
       "fileMatch": ["^.*\\.ya?ml$"],
       "matchStrings": [
-        "[\"']{0,1}(?<depName>\\S+):(?<currentValue>\\S+)[\"']{0,1}\\s+#\\s+(renovate: +)?versioning=(?<versioning>\\S+)",
-        "[\"']{0,1}(?<depName>\\S+):(?<currentValue>\\S+)[\"']{0,1}\\s+#\\s+renovate"
+        "image:\\s*(?<depName>[^:@\\s]+(?:/[^:@\\s]+)*):(?<currentValue>[^@\\s]+)@(?<currentDigest>sha256:[a-f0-9]+)\\s+#\\s*renovate",
+        "image:\\s*(?<depName>[^:@\\s]+(?:/[^:@\\s]+)*):(?<currentValue>[^@\\s]+)\\s+#\\s*renovate"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
