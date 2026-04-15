@@ -57,14 +57,14 @@
   "argocd": {
     "fileMatch": ["\\.cd.yaml$"]
   },
+  "github-actions": {
+    "managerFilePatterns": [
+      "/(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$/",
+      "/(^|/)action\\.ya?ml$/"
+    ],
+    "semanticCommitType": "ci"
+  },
   "packageRules": [
-    {
-      "fileMatch": [
-        "(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$",
-        "(^|/)action\\.ya?ml$"
-      ],
-      "semanticCommitType": "ci"
-    },
     {
       "matchManagers": ["pre-commit"],
       "matchUpdateTypes": ["patch"],
