@@ -77,6 +77,10 @@
     {
       "matchManagers": ["gomod"],
       "semanticCommitType": "fix"
+    },
+    {
+      "matchDatasources": ["golang-version"],
+      "rangeStrategy": "bump"
     }
   ]
 }
