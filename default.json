@@ -61,10 +61,14 @@
     "managerFilePatterns": [
       "/(^|/)(workflow-templates|\\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\\.ya?ml$/",
       "/(^|/)action\\.ya?ml$/"
-    ],
-    "semanticCommitType": "ci"
+    ]
   },
   "packageRules": [
+    {
+      "description": "Commit github/forgejo/gitea action updates with type ci (overrides the semanticCommitTypeAll(chore) preset, which is a catch-all packageRule that would otherwise win over manager-level config)",
+      "matchManagers": ["github-actions"],
+      "semanticCommitType": "ci"
+    },
     {
       "matchManagers": ["pre-commit"],
       "matchUpdateTypes": ["patch"],
